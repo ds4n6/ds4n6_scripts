@@ -651,11 +651,11 @@ def main():
     pd.set_option('max_colwidth', None)
     
     parser = argparse.ArgumentParser(prog="ds4n6-analysis_evtx.py")    
-    parser.add_argument('--id_stats', metavar="evtid", action="store", type=str, help="EVT id stats")
-    parser.add_argument('--string_search', metavar="string", action="store", type=str, help="String Search")
+    parser.add_argument('--id_stats', metavar="evtid", action="store", type=str, help="EVT id stats <eventid>")
+    parser.add_argument('--string_search', metavar="string", action="store", type=str, help="String Search <string to find>")
     parser.add_argument('--nonsysusers', action="store_true", help="nonsysusers stats")
-    parser.add_argument('--nonsysusers_access', action="store", type=str, nargs=3, help="Nonsysusers access stats")
-    parser.add_argument('--nonsysusers_graph', action="store", type=str, nargs=3, help="Nonsysusers graph")
+    parser.add_argument('--nonsysusers_access', action="store", type=str, nargs=3, help="Nonsysusers access stats <start date><end date><freq:Y|M...>")
+    parser.add_argument('--nonsysusers_graph', action="store", type=str, nargs=3, help="Nonsysusers graph <start date><end date><graph filename output>")
     parser.add_argument('evtxf', metavar="evtx_file", type=str, help=".evtx path")
 
     args = parser.parse_args()    

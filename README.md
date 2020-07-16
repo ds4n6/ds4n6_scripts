@@ -1,8 +1,8 @@
 <!-- PROJECT LOGO -->
 
 <p align="center">
-  <a href="http://www.ds4n6.io">
-    <img src="http://www.ds4n6.io/images/DS4N6.jpg">
+  <a href="https://ds4n6.io">
+    <img src="http://ds4n6.io/images/DS4N6.jpg">
   </a>
 
 <div>
@@ -71,15 +71,22 @@ A step by step steps for installation:
 
 ### File System Timeline (fstl)
 ```sh        
-    python3 ds4n6-analysis_fstl.py
+python3 ds4n6-analysis_fstl.py
 ```
 ### Volatility
 ```sh
-    python3 ds4n6-analysis_volatility.py
+python3 ds4n6-analysis_volatility.py
 ```
 ### Event Log (evtx)
 ```sh
-    python3 ds4n6-analysis_evtx.py
+python3 ds4n6-analysis_evtx.py --id_stats all System.evtx
+    
+python3 ds4n6-analysis_evtx.py --string_search "string2search" System.evtx
+    
+python3 ds4n6-analysis_evtx.py --nonsysusers System.evtx
+    
+python3 ds4n6-analysis_evtx.py --nonsysusers_graph "2018-06-01" "2020-01-01" "graph_output.jpg" Security.evtx
+        
 ```
 ## Contributing
 
